@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yuki&Mashiro 2026.07.03</title>
+  <script>
+    (function () {
+      try {
+        var sessionKey = 'index-loading-screen-shown';
+        var navigationEntry = performance.getEntriesByType('navigation')[0];
+        var navigationType = navigationEntry ? navigationEntry.type : 'navigate';
+        var hasShownInSession = sessionStorage.getItem(sessionKey) === 'true';
+
+        if (hasShownInSession && navigationType !== 'reload') {
+          document.documentElement.classList.add('skip-loading-screen');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Allura&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 差し画像ローディング画面 -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="media/prephoto/TMB/3.jpg" alt="Loading...">
+  </div>
+
+  <!-- 背景画像はCSSで各セクションに直接設定 -->
+  
+  <!-- 固定ヘッダー -->
+  <header class="fixed-header">
+    <h1 class="header-title">YUKI<br>MASHIRO</h1>
+    <div class="header-actions">
+      <button class="menu-pill-button" id="menuBtn" type="button" aria-expanded="false" aria-controls="navMenu">MENU</button>
+    </div>
+  </header>
+
+  <!-- ハンバーガーメニュー -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html" class="nav-item active">ホーム</a>
+    <a href="about.html" class="nav-item">紹介</a>
+    <a href="prephoto.html" class="nav-item">前撮り</a>
+    <a href="agenda.html" class="nav-item">式次</a>
+    <a href="seating.html" class="nav-item">席次</a>
+    <a href="event.html" class="nav-item">当日写真</a>
+  </nav>
+
+  <!-- メインコンテンツ（スクロール可能） -->
+  <main class="scroll-content">
+    <!-- セクション1: 目次 -->
+    <section class="content-section welcome-section">
+      <div class="content-text-fullwidth">
+        <ul class="toc-list-transparent">
+          <li><a href="#profile" class="toc-link-transparent">Profile</a></li>
+          <li><a href="#photo-gallery" class="toc-link-transparent">Photo Gallery</a></li>
+          <li><a href="#schedule" class="toc-link-transparent">Timetable</a></li>
+          <li><a href="#food" class="toc-link-transparent">Course Menu & Drinks</a></li>
+          <li><a href="#seating" class="toc-link-transparent">Seat Map</a></li>
+          <li><a href="#ceremony-photo" class="toc-link-transparent">Wedding Video & Ceremony Photos</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- セクション2: ウェルカムメッセージ -->
+    <section class="content-section welcome-section">
+      <div class="content-text-fullwidth">
+        <p class="welcome-message-transparent">Weddding reception<br></p>
+        <p class="welcome-message-date">2026.07.03</p>
+      </div>
+    </section>
+
+    <!-- セクション3: ニュース -->
+    <section class="content-section-news">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">News</h3><br><h5>ニュース</h5>
+        <p class="news-message-transparent">2026.07.03　　　本日のお願い</p>
+        <hr class="toc-divider-news">
+        <p class="news-message-transparent">2026.07.03　　　引出物について</p>
+        <hr class="toc-divider-news">
+      </div>
+    </section>
+
+    <!-- セクション4: グリーティングメッセージ -->
+    <section class="content-section-greeting-title">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Greeting</h3><br><h5>あいさつ</h5>
+      </div>
+    </section>
+    <section class="content-section-greeting greeting-bg-section">
+      <div class="content-text-fullwidth">
+        <p class="greeting-message-date">本日はご多用の中<br>ご出席いただきまして<br>誠にありがとうございます<br><br>たいせつな皆さまと<br>このような機会をご一緒でき<br>大変嬉しく思っております<br><br>たくさん飲んで 食べて 笑って<br>どうぞごゆっくりお楽しみください<br><br>Yuki & Mashiro</p>
+      </div>
+    </section>
+
+    <!-- セクション5: プロフィール -->
+    <section id="profile" class="content-section">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Profile</h3><br><h5>プロフィール</h5>
+        <div class="profile-board">
+          <section class="profile-pair">
+            <article class="profile-person-card reveal-on-scroll reveal-slide-left reveal-profile">
+              <figure class="profile-portrait">
+                <img class="profile-card-image" src="media/prephoto/雄己pro.jpg" alt="雄己プロフィール写真">
+                <figcaption class="profile-portrait-role">groom</figcaption>
+              </figure>
+              <div class="profile-person-details">
+                <div class="profile-person-row">
+                  <p class="profile-card-value">雄己</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">1999.04.21</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">O型</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-person-card profile-person-card-reverse reveal-on-scroll reveal-slide-right reveal-profile">
+              <figure class="profile-portrait">
+                <img class="profile-card-image" src="media/prephoto/真白pro.jpg" alt="真白プロフィール写真">
+                <figcaption class="profile-portrait-role">bride</figcaption>
+              </figure>
+              <div class="profile-person-details">
+                <div class="profile-person-row">
+                  <p class="profile-card-value">真白</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">2000.11.14</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">A型</p>
+                </div>
+              </div>
+            </article>
+          </section>
+          <article class="profile-person-card reveal-on-scroll reveal-slide-left reveal-profile">
+            <figure class="profile-portrait">
+              <img class="profile-card-image" src="media/prephoto/リアpro.jpg" alt="リアプロフィール写真">
+              <figcaption class="profile-portrait-role">my dog</figcaption>
+            </figure>
+              <div class="profile-person-details">
+                <div class="profile-person-row">
+                  <p class="profile-card-value">リア</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">2021.04.28</p>
+                </div>
+                <div class="profile-person-row">
+                  <p class="profile-card-value">ガタ型</p>
+                </div>
+              </div>
+          </article>
+        </div>
+        <p class="profile-about-link-wrap">
+          <a class="profile-about-link" href="about.html">プロフィールをもっと見る</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- セクション6: フォトギャラリー -->
+    <section id="photo-gallery" class="content-section">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Photo Gallery</h3><br><h5>フォト</h5>
+        <h3 class="section-title-transparent">Wedding Photos</h3><br><h5>前撮り</h5>
+        <div class="photo-carousel" data-interval="2200" data-duration="820">
+          <div class="photo-carousel-viewport" aria-live="polite"></div>
+          <div class="photo-carousel-source" hidden>
+            <img src="media/prephoto/photo-wedding/7.jpg" alt="Wedding Photo 1">
+            <img src="media/prephoto/photo-wedding/29.jpg" alt="Wedding Photo 2">
+            <img src="media/prephoto/photo-wedding/19.jpg" alt="Wedding Photo 3">
+            <img src="media/prephoto/photo-wedding/161.jpg" alt="Wedding Photo 4">
+            <img src="media/prephoto/photo-wedding/171.jpg" alt="Wedding Photo 5">
+          </div>
+          <p><a href="prephoto.html" class="view-more-link">View more...</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション7: タイムテーブル -->
+    <section id="schedule" class="content-section">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Timetable</h3><br><h5>タイムテーブル</h5>
+        <button class="zoomable-image-button reveal-on-scroll reveal-slide-left" type="button" data-zoom-image="media/prephoto/タイムテーブル.png" data-zoom-alt="Timetable">
+          <img class="timetable-image" src="media/prephoto/タイムテーブル.png" alt="Timetable">
+        </button>
+        <p class="zoomable-image-hint">Tap the image to enlarge</p>
+      </div>
+    </section>
+
+    <!-- セクション8: フード & ドリンク -->
+    <!-- ドリンクは2列構成 -->
+    <section id="food" class="content-section">
+      <div class="content-text-fullwidth course-menu-section">
+        <h3 class="section-title-transparent">Course Menu & Drinks</h3><br><h5 class="menu-title">メニュー</h5>
+        <div class="food-menu-block reveal-on-scroll reveal-slide-right">
+          <div class="food-menu-heading">
+            <p class="food-menu-heading-script">Menu</p>
+            <p class="food-menu-heading-side">FOOD</p>
+          </div>
+          <div class="food-menu-board">
+            <article class="food-menu-item">
+              <p class="food-menu-category">Appetizer</p>
+              <p class="food-menu-line">チキンと豆のサラダ / カラフルトマト</p>
+              <p class="food-menu-subline">~ブラックオリーブ風味のクリームチーズ添え~</p>
+            </article>
+            <article class="food-menu-item">
+              <p class="food-menu-category">Soup</p>
+              <p class="food-menu-line">鮮魚のコンソメスープ</p>
+              <p class="food-menu-subline">~鱧の炙り入り茶碗蒸し仕立て~</p>
+            </article>
+            <article class="food-menu-item">
+              <p class="food-menu-category">Fish</p>
+              <p class="food-menu-line">旬魚のポワレ / ローメインレタスのエチュべ</p>
+            </article>
+            <article class="food-menu-item">
+              <p class="food-menu-category">Meat</p>
+              <p class="food-menu-line">牛肉のカットステーキ　旬の温野菜添え</p>
+              <p class="food-menu-subline">~ポン酢とワサビ風味のグレイビーソース~</p>
+              <p class="food-menu-detail">お肉の焼き加減をお伝えください<br>（レア、ミディアム、ウェルダン etc.）</p>
+            </article>
+            <article class="food-menu-item">
+              <p class="food-menu-category">Dessert</p>
+              <p class="food-menu-line">デザート & 食後のお飲み物</p>
+            </article>
+            <article class="food-menu-item">
+              <p class="food-menu-category">Others</p>
+              <p class="food-menu-line">パン（おかわり自由）</p>
+            </article>
+          </div>
+        </div>
+        <div class="drink-menu-block reveal-on-scroll reveal-slide-left">
+          <div class="drink-menu-heading">
+            <p class="drink-menu-heading-script">Menu</p>
+            <p class="drink-menu-heading-side">DRINK</p>
+          </div>
+          <div class="drink-menu-columns">
+            <div class="drink-menu-column">
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Beer</h4>
+                <ul class="drink-menu-list">
+                  <li>ドラフトビール / キリンラガー</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Non-Alcohol Beer</h4>
+                <ul class="drink-menu-list">
+                  <li>グリーンズフリー</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">White Wine</h4>
+                <ul class="drink-menu-list">
+                  <li>デル・スール シャルドネ</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Red Wine</h4>
+                <ul class="drink-menu-list">
+                  <li>デル・スール カベルネ・ソーヴィニヨン</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Soft Drink</h4>
+                <ul class="drink-menu-list">
+                  <li>オレンジ</li>
+                  <li>グレープフルーツ</li>
+                  <li>アップルジュース</li>
+                  <li>コカ コーラ</li>
+                  <li>ジンジャーエール</li>
+                  <li>ソーダ</li>
+                  <li>トニック</li>
+                  <li>ウーロン茶</li>
+                  <li>麦茶</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Non-Alcohol Cocktail Base</h4>
+                <ul class="drink-menu-list">
+                  <li>マンゴー</li>
+                  <li>パッションフルーツ</li>
+                  <li>ユズ</li>
+                  <li>パイナップル</li>
+                  <li>巨峰</li>
+                  <li>キウイ</li>
+                  <li>白桃</li>
+                  <li>洋ナシ</li>
+                </ul>
+                <p class="drink-menu-note">*上記のベースをお使いし多数のノンアルコールのカクテルがお作りできます</p>
+              </article>
+            </div>
+            <div class="drink-menu-column">
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Cocktail</h4>
+                <ul class="drink-menu-list">
+                  <li>ジントニック</li>
+                  <li>ジンバック</li>
+                  <li>ウォッカトニック</li>
+                  <li>ファジーネーブル</li>
+                  <li>カンパリオレンジ</li>
+                  <li>スプモーニ</li>
+                  <li>モスコミュール</li>
+                  <li>スクリュードライバー</li>
+                  <li>ブルドック</li>
+                  <li>チャイナブルー</li>
+                  <li>カシスオレンジ</li>
+                  <li>カシスグレープフルーツ</li>
+                  <li>カシスダンサー</li>
+                  <li>ハイボール</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Fruit Liqueur</h4>
+                <ul class="drink-menu-list">
+                  <li>梅酒（水 / お湯 / ロック / ソーダ割り）</li>
+                </ul>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Original Cocktail</h4>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">1.-KAMARI- カマリ</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">ウォッカ &amp; 洋ナシ &amp; ソーダ</p>
+                </div>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">2.-AMOUDI- アモウディ</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">赤ワイン &amp; 白桃 &amp; オレンジ</p>
+                </div>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">3.-THIRASIA- ティラシア</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">ライチ &amp; オレンジ &amp; ソーダ</p>
+                </div>
+              </article>
+              <article class="drink-menu-category">
+                <h4 class="drink-menu-category-title">Original Non-Alcohol Cocktail</h4>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">1.-SANTORINI- サントリーニ</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">パイナップル &amp; リンゴ &amp; ソーダ</p>
+                </div>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">2.-OIA- イア</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">パッションフルーツ &amp; オレンジ</p>
+                </div>
+                <div class="drink-menu-recipe">
+                  <p class="drink-menu-recipe-name">3.-EMPORIO- エンポリオ</p>
+                  <p class="drink-menu-recipe-label">-Recipe-</p>
+                  <p class="drink-menu-recipe-body">巨峰 &amp; グレープフルーツ &amp; ジンジャーエール</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション9: シートマップ -->
+    <section id="seating" class="content-section">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Seat Map</h3><br><h5>席次表</h5>
+        <button class="zoomable-image-button reveal-on-scroll reveal-slide-left" type="button" data-zoom-image="media/prephoto/7table.png" data-zoom-alt="Seat Map">
+          <img class="timetable-image seat-map-image" src="media/prephoto/7table.png" alt="Seat Map">
+        </button>
+        <p class="zoomable-image-hint">Tap the image to enlarge</p>
+      </div>
+    </section>
+
+    <!-- セクション10: セレモニーフォト -->
+    <section id="ceremony-photo" class="content-section">
+      <div class="content-text-fullwidth">
+        <h3 class="section-title-transparent">Wedding Video&Ceremony Photos</h3><br><h5>ムービー&式当日写真</h5>
+        <p class="profile-message-transparent small">Coming Soon...<br>Photos will be added after the ceremony.</p>
+      </div>
+    </section>
+
+    <footer class="content-footer">
+      <p>Honda Yuki　&　Honda Mashiro</p>
+      <p class="small">2026.07.03</p>
+      <p class="small">LE CENTIFORIA OSAKA</p>
+    </footer>
+  </main>
+
+  <div id="imageLightbox" class="image-lightbox" hidden>
+    <button id="imageLightboxClose" class="image-lightbox-close" type="button" aria-label="Close image view">Close</button>
+    <img id="imageLightboxContent" class="image-lightbox-content" src="" alt="">
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

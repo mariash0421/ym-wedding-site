@@ -1,0 +1,11 @@
+{
+  "pre": [
+    {"url":"media/prephoto/01.jpg","thumb":"media/prephoto/01-thumb.jpg","title":"前撮り1"},
+    {"url":"media/prephoto/02.jpg","thumb":"media/prephoto/02-thumb.jpg","title":"前撮り2"}
+  ],
+  "video": [
+    {"url":"https://www.youtube.com/watch?v=XXXX","title":"前撮り動画（YouTube）"}
+  ],
+  "event":[
+  ]
+}
