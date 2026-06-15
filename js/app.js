@@ -230,6 +230,37 @@ function initMainFeatures() {
   initScrollReveals();
 }
 
+function initHomeIntroBackground() {
+  const region = document.querySelector('.home-intro-background-region');
+  const background = document.querySelector('.home-intro-fixed-background');
+
+  if (!region || !background) {
+    return;
+  }
+
+  let ticking = false;
+
+  function updateVisibility() {
+    const regionRect = region.getBoundingClientRect();
+    const isVisible = regionRect.bottom > 0 && regionRect.top < window.innerHeight;
+    background.classList.toggle('is-hidden', !isVisible);
+    ticking = false;
+  }
+
+  function requestUpdate() {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(updateVisibility);
+  }
+
+  updateVisibility();
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+}
+
 function initProfilePhotoStacks() {
   document.querySelectorAll('.profile-photo-stack').forEach((stack) => {
     const images = Array.from(stack.querySelectorAll('.profile-photo-stack-image'));
@@ -443,6 +474,7 @@ window.addEventListener('load', ()=>{
   const loadingScreen = document.getElementById('loading-screen');
   const showLoadingScreen = shouldShowLoadingScreen();
 
+  initHomeIntroBackground();
   initPhotoCarousel();
 
   if(showLoadingScreen && loadingScreen){
