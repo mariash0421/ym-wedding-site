@@ -287,21 +287,27 @@ body {
 }
 
 .content-section-greeting-title {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -1px;
   padding: 0.2rem 20px;
-  background: linear-gradient(180deg, rgba(212, 231, 239, 0.96) 0%, rgba(188, 218, 231, 0.93) 55%, rgba(169, 204, 221, 0.9) 100%);
+  background: linear-gradient(180deg, rgb(212, 231, 239) 0%, rgb(188, 218, 231) 55%, rgb(169, 204, 221) 100%);
 }
 
 /* コンテンツセクション */
 .content-section-news {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  padding-bottom: 1rem;
-  background: rgba(220, 220, 220, 0.92);
+  padding-bottom: 0;
+  margin: 0;
+  background: rgb(220, 220, 220);
 }
 
 .content-card {
@@ -378,13 +384,13 @@ body {
 
 .profile-person-card {
   display: grid;
-  grid-template-columns: minmax(160px, 46%) 1fr;
+  grid-template-columns: 50% minmax(0, 1fr);
   gap: 1rem;
   align-items: center;
 }
 
 .profile-person-card-reverse {
-  grid-template-columns: 1fr minmax(160px, 46%);
+  grid-template-columns: minmax(0, 1fr) 50%;
 }
 
 .profile-person-card-reverse .profile-portrait {
@@ -438,8 +444,7 @@ body {
 
 .profile-card-image {
   width: 100%;
-  max-width: 270px;
-  aspect-ratio: 3 / 4;
+  max-width: 320px;
   display: block;
   object-fit: cover;
 }
@@ -453,7 +458,7 @@ body {
 }
 
 .profile-card-ria .profile-card-image {
-  max-width: 270px;
+  max-width: 320px;
 }
 
 .profile-portrait-role {
@@ -1037,6 +1042,10 @@ body {
   background: rgba(255,255,255,0.6);
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.content-section-news .toc-divider-news:last-child {
+  margin-bottom: 0;
 }
 
 .toc-list-transparent {
