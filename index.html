@@ -20,13 +20,14 @@
       }
     })();
   </script>
+  <link rel="preload" as="image" href="media/optimized/prephoto/loading.webp" fetchpriority="high" />
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Allura&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- 差し画像ローディング画面 -->
   <div id="loading-screen" class="loading-screen">
-    <img src="media/prephoto/TMB/3.jpg" alt="Loading...">
+    <img src="media/optimized/prephoto/loading.webp" alt="Loading..." fetchpriority="high" decoding="async">
   </div>
 
   <!-- 背景画像はCSSで各セクションに直接設定 -->
@@ -108,7 +109,7 @@
           <section class="profile-pair">
             <article class="profile-person-card reveal-on-scroll reveal-slide-left reveal-profile">
               <figure class="profile-portrait">
-                <img class="profile-card-image" src="media/prephoto/雄己pro.jpg" alt="雄己プロフィール写真">
+                <img class="profile-card-image" src="media/optimized/prephoto/雄己pro.webp" alt="雄己プロフィール写真" loading="lazy" decoding="async">
                 <figcaption class="profile-portrait-role">groom</figcaption>
               </figure>
               <div class="profile-person-details">
@@ -126,7 +127,7 @@
 
             <article class="profile-person-card profile-person-card-reverse reveal-on-scroll reveal-slide-right reveal-profile">
               <figure class="profile-portrait">
-                <img class="profile-card-image" src="media/prephoto/真白pro.jpg" alt="真白プロフィール写真">
+                <img class="profile-card-image" src="media/optimized/prephoto/真白pro.webp" alt="真白プロフィール写真" loading="lazy" decoding="async">
                 <figcaption class="profile-portrait-role">bride</figcaption>
               </figure>
               <div class="profile-person-details">
@@ -144,7 +145,7 @@
           </section>
           <article class="profile-person-card reveal-on-scroll reveal-slide-left reveal-profile">
             <figure class="profile-portrait">
-              <img class="profile-card-image" src="media/prephoto/リアpro.jpg" alt="リアプロフィール写真">
+              <img class="profile-card-image" src="media/optimized/prephoto/リアpro.webp" alt="リアプロフィール写真" loading="lazy" decoding="async">
               <figcaption class="profile-portrait-role">my dog</figcaption>
             </figure>
               <div class="profile-person-details">
@@ -174,11 +175,11 @@
         <div class="photo-carousel" data-interval="2200" data-duration="820">
           <div class="photo-carousel-viewport" aria-live="polite"></div>
           <div class="photo-carousel-source" hidden>
-            <img src="media/prephoto/photo-wedding/7.jpg" alt="Wedding Photo 1">
-            <img src="media/prephoto/photo-wedding/29.jpg" alt="Wedding Photo 2">
-            <img src="media/prephoto/photo-wedding/19.jpg" alt="Wedding Photo 3">
-            <img src="media/prephoto/photo-wedding/161.jpg" alt="Wedding Photo 4">
-            <img src="media/prephoto/photo-wedding/171.jpg" alt="Wedding Photo 5">
+            <img src="media/optimized/photo-wedding/7.webp" alt="Wedding Photo 1" loading="lazy" decoding="async">
+            <img src="media/optimized/photo-wedding/29.webp" alt="Wedding Photo 2" loading="lazy" decoding="async">
+            <img src="media/optimized/photo-wedding/19.webp" alt="Wedding Photo 3" loading="lazy" decoding="async">
+            <img src="media/optimized/photo-wedding/161.webp" alt="Wedding Photo 4" loading="lazy" decoding="async">
+            <img src="media/optimized/photo-wedding/171.webp" alt="Wedding Photo 5" loading="lazy" decoding="async">
           </div>
           <p><a href="prephoto.html" class="view-more-link">View more...</a></p>
         </div>
@@ -190,7 +191,7 @@
       <div class="content-text-fullwidth">
         <h3 class="section-title-transparent">Timetable</h3><br><h5>タイムテーブル</h5>
         <button class="zoomable-image-button reveal-on-scroll reveal-slide-left" type="button" data-zoom-image="media/prephoto/timetable.png" data-zoom-alt="Timetable">
-          <img class="timetable-image" src="media/prephoto/timetable.png" alt="Timetable">
+          <img class="timetable-image" src="media/prephoto/timetable.png" alt="Timetable" loading="lazy" decoding="async">
         </button>
         <p class="zoomable-image-hint">Tap the image to enlarge</p>
       </div>
@@ -370,7 +371,7 @@
       <div class="content-text-fullwidth">
         <h3 class="section-title-transparent">Seat Map</h3><br><h5>席次表</h5>
         <button class="zoomable-image-button reveal-on-scroll reveal-slide-left" type="button" data-zoom-image="media/prephoto/7table.png" data-zoom-alt="Seat Map">
-          <img class="timetable-image seat-map-image" src="media/prephoto/7table.png" alt="Seat Map">
+          <img class="timetable-image seat-map-image" src="media/prephoto/7table.png" alt="Seat Map" loading="lazy" decoding="async">
         </button>
         <p class="zoomable-image-hint">Tap the image to enlarge</p>
       </div>

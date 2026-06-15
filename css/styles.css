@@ -37,7 +37,7 @@ body {
   overflow: hidden;
   z-index: 5000;
   opacity: 1;
-  transition: opacity 2s ease;
+  transition: opacity 600ms ease;
 }
 
 .loading-screen img {
@@ -69,7 +69,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-image: url('../media/prephoto/lecenti1.jpeg');
+  background-image: url('../media/optimized/prephoto/lecenti1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@ body {
 
 .greeting-bg-section:not(.welcome-section) {
   /* グリーティングセクション: fuji.jpg背景 */
-  background-image: url('../media/prephoto/ym1.jpg');
+  background-image: url('../media/optimized/prephoto/ym1.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
