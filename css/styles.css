@@ -366,6 +366,11 @@ body {
   line-height: 2;
 }
 
+.news-message-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .profile-message-transparent.small {
   font-size: 1.2rem;
   line-height: 1.5;
@@ -872,6 +877,21 @@ body {
   line-height: 1.5;
 }
 
+.drink-menu-download-wrap {
+  margin: 1.2rem 0 0;
+  text-align: right;
+}
+
+.drink-menu-download-link {
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.28);
+}
+
 .zoomable-image-button {
   width: calc(100vw - 40px);
   max-width: 100%;
@@ -897,8 +917,8 @@ body {
   margin-top: 0.65rem;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+  color: rgba(238, 238, 238, 0.96);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
 }
 
 .image-lightbox {
@@ -1974,6 +1994,10 @@ body {
   padding-top: 0;
 }
 
+#today-notes {
+  scroll-margin-top: 90px;
+}
+
 .agenda-heading,
 .seating-heading {
   margin-bottom: 1.4rem;
@@ -2333,6 +2357,84 @@ body {
 
 .family-intro-row dd {
   color: #5d5348;
+}
+
+.nephew-intro-section {
+  margin-top: 2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(145, 126, 103, 0.18);
+}
+
+.nephew-intro-title {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #40372e;
+}
+
+.nephew-intro-groups {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.nephew-intro-group {
+  border: none;
+}
+
+.nephew-intro-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 3.4rem;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #5d5348;
+  font-family: inherit;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nephew-intro-plus {
+  position: relative;
+  flex: 0 0 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.nephew-intro-plus::before,
+.nephew-intro-plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.8rem;
+  height: 1px;
+  background: #766756;
+  transform: translate(-50%, -50%);
+  transition: transform 240ms ease;
+}
+
+.nephew-intro-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.nephew-intro-toggle[aria-expanded="true"] .nephew-intro-plus::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.nephew-intro-panel {
+  margin: 0 0 0.75rem;
+}
+
+.nephew-intro-panel[hidden] {
+  display: none;
 }
 
 /* ギャラリーページ用 */

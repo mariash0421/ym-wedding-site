@@ -227,7 +227,25 @@ function initMainFeatures() {
 
   initImageLightbox();
   initProfilePhotoStacks();
+  initNephewIntroductions();
   initScrollReveals();
+}
+
+function initNephewIntroductions() {
+  document.querySelectorAll('.nephew-intro-toggle').forEach((button) => {
+    const panelId = button.getAttribute('aria-controls');
+    const panel = panelId ? document.getElementById(panelId) : null;
+
+    if (!panel) {
+      return;
+    }
+
+    button.addEventListener('click', () => {
+      const willOpen = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(willOpen));
+      panel.hidden = !willOpen;
+    });
+  });
 }
 
 function initHomeIntroBackground() {
@@ -488,15 +506,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
           loadingImage.addEventListener('load', resolve, { once: true });
           loadingImage.addEventListener('error', resolve, { once: true });
         });
-    const maximumWait = new Promise((resolve) => window.setTimeout(resolve, 1200));
+    const minimumDisplayTime = new Promise((resolve) => window.setTimeout(resolve, 2500));
 
-    Promise.race([imageReady, maximumWait]).then(() => {
+    Promise.all([imageReady, minimumDisplayTime]).then(() => {
+      loadingScreen.classList.add('hide');
       window.setTimeout(() => {
-        loadingScreen.classList.add('hide');
-        window.setTimeout(() => {
-          loadingScreen.style.display = 'none';
-        }, 600);
-      }, 350);
+        loadingScreen.style.display = 'none';
+      }, 600);
     });
   } else {
     if (loadingScreen) {
