@@ -133,7 +133,7 @@ body {
 
 #profile {
   background: #f3f0e9;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 /* 背景画像要素を非表示 */
@@ -283,7 +283,7 @@ body {
 #food.content-section,
 #seating.content-section,
 #ceremony-photo.content-section {
-  padding-bottom: 7rem;
+  padding-bottom: 2.5rem;
 }
 
 .home-intro-background-region > .content-section:first-of-type {
@@ -416,12 +416,10 @@ body {
 .profile-board {
   display: grid;
   gap: 1.35rem;
-  margin-top: 1rem;
 }
 
 .profile-pair {
   display: grid;
-  gap: 1.35rem;
 }
 
 .profile-person-card {
@@ -2128,6 +2126,7 @@ body {
 .agenda-timeline {
   display: grid;
   gap: 0.9rem;
+  margin-left: 1.5rem;
 }
 
 .agenda-item {
@@ -2157,6 +2156,7 @@ body {
   font-weight: 400;
   line-height: 1.55;
   color: #40372e;
+  margin-left: 1rem;
 }
 
 .agenda-item-text {
